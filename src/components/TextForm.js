@@ -12,10 +12,12 @@ export default function TextForm(props) {
     setText(newText);
   };
   const handlelowClick = () => {
-    // console.log("Uppercase was Clicked" + text);
-    // setText("This is the way to change state")
-
     let newText = text.toLowerCase();
+    setText(newText);
+  };
+
+  const handledeleteClick = () => {
+    let newText = "";
     setText(newText);
   };
 
@@ -45,6 +47,9 @@ export default function TextForm(props) {
         </button>
         <button className="btn btn-success mx-1" onClick={handlelowClick}>
           Convert to Lowcase
+        </button>
+        <button className="btn btn-danger mx-1" onClick={handledeleteClick}>
+          Reset
         </button>
       </div>
 
